@@ -1,0 +1,526 @@
+/* Enhanced CSS */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    padding: 8px;
+    background: rgb(118, 104, 86);
+    text-align: center;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 64px;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center; /* Center text inside main */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #af7d38;
+}
+
+input, textarea {
+    height: 32px;
+    padding: 0 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    border: none;
+    box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+#banner {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7) url('images/bg.jfif') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the banner */
+    color: bisque;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+#banner h1 {
+    font-size: 64px;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#banner h1, #banner h3:hover {
+    transition: color 1s ease;
+    color: #af7d38;
+}
+
+#banner h3 {
+    font-size: 26px;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    color: #856e41;
+    font-family: 'Roboto Slab', serif;
+}
+
+#searchbox {
+    position: fixed;
+    right: 0;
+    top: 24px;
+    width: 500px;
+    pointer-events: none;
+    z-index: 50;
+    transition: all 0.4s ease;
+}
+
+#searchbox input {
+    height: 48px;
+    width: 100%;
+}
+
+nav {
+    height: 110px;
+    background: #856e41;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 100;
+    transition: background 0.4s ease;
+}
+
+nav a {
+    padding: 0 32px;
+    color: azure;
+    transition: color 0.4s ease;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.active {
+    color: #f783ae;
+}
+
+#logo-img {
+    display: flex;
+    height: 100%;
+    background: #856e41;
+    padding: 0 32px;
+    align-items: center;
+    color: #856e41;
+    transition: background 0.4s ease;
+}
+
+#logo-img img {
+    height: 100px;
+}
+
+#logo-img:hover {
+    background: rgb(239, 237, 235);
+}
+
+#menu-icon {
+    height: 100%;
+    font-size: 25px;
+    padding: 0 4px;
+    color: #eee;
+    align-items: center;
+    display: none;
+}
+
+#search-icon {
+    color: white;
+    padding: 0 32px;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+#search-icon:hover {
+    color: rgb(180, 140, 92);
+}
+
+#slideout-menu {
+    display: none;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+a[href='#'] {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+a[href='#'] h2.section-heading {
+    font-size: 32px;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: color 0.4s ease, transform 0.4s ease;
+    color: #333; /* Text color */
+    background: none; /* Remove background if any */
+    border: none; /* Remove border if any */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Add a hover effect for the heading */
+a[href='#'] h2.section-heading:hover {
+    color: #af7d38;
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+.section-heading {
+    font-size: 32px;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition: all 0.4s ease;
+    display: inline-block;
+    padding: 4px 32px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section-heading:hover {
+    padding: 4px;
+    background-color: bisque;
+}
+
+#section-source p {
+    padding: 8px;
+    text-align: center;
+    font-style: italic;
+}
+
+#section-source a {
+    padding: 8px;
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    transition: 0.4s ease;
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-description {
+    padding: 16px;
+    background-color: white;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card-description a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-description a:hover {
+    color: #af7d38;
+}
+
+.card-description p {
+    margin: 16px 0;
+}
+
+.btn-readmore, .btn-readmoree {
+    padding: 8px 24px;
+    border: 3px solid black;
+    transition: all 0.4s ease;
+    display: inline-block;
+    margin-bottom: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.btn-readmore:hover {
+    background: burlywood;
+    padding: 8px 64px;
+    border-radius: 12px;
+    color: #333;
+}
+
+.btn-readmoree {
+    background-color: rgb(240, 245, 247);
+}
+
+.btn-readmoree:hover {
+    background: rgb(218, 97, 75);
+    padding: 8px 64px;
+    color: white;
+    border-radius: 12px;
+}
+
+#searchbox input {
+    height: 48px;
+    width: 100%;
+    border-radius: 24px;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease;
+}
+
+#searchbox input:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #af7d38;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8a5c28;
+}
+
+/* Responsive Adjustments */
+@media(min-width: 720px) {
+    main {
+        width: 95%;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card-image img {
+        width: 85%;
+        height: auto;
+    }
+}
+
+@media(max-width: 720px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    #searchbox {
+        width: 100%;
+        right: 0;
+        top: 60px;
+    }
+
+    .btn-readmore, .btn-readmoree {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Section Source Styles */
+#section-source {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+#section-source:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+#section-source p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+#section-source:hover p {
+    color: #333;
+}
+
+/* Left Footer Styles */
+.left-footer {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.left-footer:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.left-footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.left-footer:hover h3 {
+    color: #af7d38;
+}
+
+.left-footer p {
+    margin: 0;
+}
+
+.left-footer ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.left-footer ul li {
+    margin: 5px 0;
+}
+
+.left-footer ul li a {
+    text-decoration: none;
+    color: #af7d38;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.left-footer ul li a:hover {
+    color: #856e41;
+    transform: scale(1.1);
+}
+
+/* Right Footer Styles */
+#rightfooter {
+    text-align: center;
+}
+
+#rightfooter h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#rightfooter:hover h3 {
+    color: #af7d38;
+}
+
+#Social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#Social ul li {
+    margin: 0 10px;
+}
+
+#Social ul li a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#Social ul li a:hover {
+    color: #af7d38;
+    transform: scale(1.1);
+}
+
